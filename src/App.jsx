@@ -1,0 +1,22 @@
+import './App.css'
+import Experience from './component/experince'
+import ContactPage from './Pages/ContactPage'
+import HomePage from './Pages/HomePage'
+import ProjectsPage from './Pages/ProjectsPage'
+import WorkPage from './Pages/WorkPage'
+import { motion } from 'framer-motion'
+
+function App() {
+
+  return (
+    <>
+      <HomePage/>
+      <Experience/>
+      <ProjectsPage/>
+      <WorkPage/>
+      <ContactPage/>
+    </>
+  )
+}
+
+export default App

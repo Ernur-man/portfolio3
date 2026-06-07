@@ -1,0 +1,22 @@
+<svg width="100%" viewBox="0 0 680 280" role="img" xmlns="http://www.w3.org/2000/svg" style="">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Логотип E.</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Стильный логотип E. с градиентом и декоративной линией</desc>
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="50%" style="stop-color:#e11d8a"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316;stop-opacity:0"/>
+      <stop offset="30%" style="stop-color:#e11d8a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0"/>
+    </linearGradient>
+  <mask id="imagine-text-gaps-29sdbu" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="680" height="280" fill="white"/><rect x="256.3500061035156" y="46.999996185302734" width="167.3000030517578" height="172.6666717529297" fill="black" rx="2"/><rect x="269.2749938964844" y="226" width="141.4499969482422" height="18.666666984558105" fill="black" rx="2"/></mask></defs>
+
+  <text x="340" y="185" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="148" font-weight="700" fill="url(#g1)" letter-spacing="2" style="stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:148px;font-weight:700;text-anchor:middle;dominant-baseline:auto">E.</text>
+
+  <line x1="200" y1="210" x2="480" y2="210" stroke="url(#g2)" stroke-width="1.5" mask="url(#imagine-text-gaps-29sdbu)" style="fill:rgb(0, 0, 0);color:rgb(251, 251, 254);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <text x="340" y="240" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#888" letter-spacing="6" style="fill:rgb(136, 136, 136);stroke:none;color:rgb(251, 251, 254);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Helvetica Neue&quot;, Arial, sans-serif;font-size:13px;font-weight:400;text-anchor:middle;dominant-baseline:auto">DEVELOPER</text>
+</svg>

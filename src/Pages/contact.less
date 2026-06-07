@@ -1,0 +1,134 @@
+@import '../reset.less';
+
+
+
+.contact {
+    width: 100%;
+    padding: 100px 0;
+
+    .container {
+        width: 50%;
+        margin: 0 auto;
+
+        h2 { margin-bottom: 32px; }
+
+        .bio {
+            color: #aaa;
+            line-height: 1.75;
+            margin-bottom: 28px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+            margin-bottom: 28px;
+
+            li {
+                font-size: 11px;
+                color: @accent;
+                border: 1px solid fade(@accent, 30%);
+                padding: 4px 12px;
+                border-radius: 100px;
+                letter-spacing: 0.08em;
+            }
+        }
+
+        .availability {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 28px;
+
+            .dot {
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: @accent;
+                animation: pulse 2s infinite;
+            }
+
+            p { font-size: 13px; color: #666; }
+            span { color: @accent; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: #222;
+            margin-bottom: 28px;
+        }
+
+        .email {
+            margin-bottom: 32px;
+            color: #ccc;
+            i { margin-right: 10px; color: @accent; }
+        }
+
+        menu {
+            i {
+                font-size: 22px;
+                margin-right: 20px;
+                color: #aaa;
+                cursor: pointer;
+                transition: color 0.2s;
+                &:hover { color: @accent; }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 60px 0;
+
+        .container {
+            width: 90%; 
+
+            h2 {
+                margin-bottom: 24px;
+            }
+
+            .bio {
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+
+            .tags {
+                margin-bottom: 20px;
+                gap: 6px;
+
+                li {
+                    font-size: 10px;
+                    padding: 3px 10px;
+                }
+            }
+
+            .availability {
+                margin-bottom: 20px;
+            }
+
+            .divider {
+                margin-bottom: 20px;
+            }
+
+            .email {
+                margin-bottom: 24px;
+            }
+
+            menu {
+                i {
+                    font-size: 20px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@import '../reset.less';
+
+.work{
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .container{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        h2{
+            color: rgb(56, 151, 245);
+            font-size: 30px;
+            margin-bottom: 40px;
+        }
+        article{
+            width: 60%;
+            margin: 0 auto;
+            .flex_between;
+            align-items: flex-start;
+            flex-direction: column;
+            text-align: start;
+            div{
+                width: 100%;
+                padding: 40px;
+                nav{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 140px;
+                        margin-right: 40px;
+                    }
+                    .nav_info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 6px;
+
+                        .role {
+                            color: rgb(56, 151, 245);
+                            font-size: 14px;
+                        }
+
+                        .date {
+                            color: rgba(255, 255, 255, 0.4);
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .work {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .container {
+            width: 95%;
+
+            h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            article {
+                width: 100%; // Занимаем всю доступную ширину
+
+                div {
+                    padding: 20px; // Уменьшаем отступы для компактности
+
+                    nav {
+                        flex-direction: column; // Ставим логотип над информацией
+                        text-align: center;
+                        gap: 15px;
+
+                        img {
+                            width: 100px; // Немного уменьшаем логотип
+                            margin-right: 0; // Убираем марджин, так как элементы теперь друг над другом
+                        }
+
+                        .nav_info {
+                            align-items: center; // Центрируем текст
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

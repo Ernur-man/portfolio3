@@ -1,0 +1,51 @@
+@import '../reset.less';
+
+.experience{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .container{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        h2{
+            margin-bottom: 50px;
+            color: rgba(197, 197, 197, 1);
+            letter-spacing: 3px;
+        }
+        aside{
+            width: 40%;
+            margin: 0 auto;
+            .flex_between;
+            img{
+                width: 50px;
+            }
+        }
+    }
+}
+
+
+/* Адаптация секции Experience для мобильных устройств */
+@media (max-width: 768px) {
+    .experience {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .container {
+            h2 {
+                margin-bottom: 30px;
+                font-size: 24px; // Чуть уменьшаем заголовок
+            }
+
+            aside {
+                width: 90%; // Расширяем контейнер с иконками почти на весь экран
+                gap: 15px;  // Добавляем отступы между иконками, если их много
+                
+                img {
+                    width: 40px; // Немного уменьшаем размер иконок
+                    height: auto; // Сохраняем пропорции
+                }
+            }
+        }
+    }
+}
