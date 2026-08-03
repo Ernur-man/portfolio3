@@ -46,6 +46,7 @@ export default function Experience() {
               alt="Technology" 
               variants={iconVariants}
               whileHover={{ scale: 1.1 }} 
+              loading='lazy'
             />
           ))}
         </motion.aside>

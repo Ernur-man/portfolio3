@@ -2,17 +2,15 @@
 
 header {
     width: 100%;
-    border: 1px solid rgba(105, 113, 162, 0.16);
-    border-radius: 13px;
+    border: 0.5px solid rgba(105, 113, 162, 0.16);
     background: linear-gradient(150.75deg, rgba(4, 7, 29, 1) 16.657%, rgba(12, 14, 35, 1) 81.613%);
     padding: 15px 0;
-
     .container {
         width: 85%;
         margin: 0 auto;
         .flex_between;
 
-        img { width: 150px; }
+        img { width: 90px; }
 
         .burger { display: none; cursor: pointer; font-size: 24px; color: white; }
 
@@ -33,36 +31,36 @@ header {
         border-radius: 0;
         .container {
             width: 95%;
-            position: relative; 
-        
-            
-            .burger { 
-                display: block; 
-                z-index: 1000; 
+            position: relative;
+
+
+            .burger {
+                display: block;
+                z-index: 1000;
             }
 
             menu {
-                display: none; 
-                position: fixed; 
+                display: none;
+                position: fixed;
                 top: 0;
                 left: 0;
-                width: 100vw;  
-                height: 100vh;  
-                background: rgba(1, 4, 20, 0.98); 
+                width: 100vw;
+                height: 100vh;
+                background: rgba(1, 4, 20, 0.98);
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                gap: 40px;    
-                z-index: 999;   
+                gap: 40px;
+                z-index: 999;
 
                 &.active {
-                    display: flex; 
+                    display: flex;
                 }
 
                 li {
                     list-style: none;
                     a {
-                        font-size: 24px; 
+                        font-size: 24px;
                         font-weight: 600;
                     }
                 }

@@ -40,7 +40,7 @@ export default function WorkPage() {
         >
           <motion.div variants={itemVariants}>
             <nav>
-              <img src={logo_ktzh} alt="KTZH" />
+              <img src={logo_ktzh} alt="KTZH" loading='lazy'/>
               <div className="nav_info">
                 <h4>KTZH PROJECT</h4>
                 <span className="role">Frontend Developer</span>
@@ -54,7 +54,7 @@ export default function WorkPage() {
 
           <motion.div variants={itemVariants}>
             <nav>
-              <img src={logo_itm} alt="ITM" />
+              <img src={logo_itm} alt="ITM" loading='lazy'/>
               <div className="nav_info">
                 <h4>ITM PROJECT</h4>
                 <span className="role">Frontend Developer</span>

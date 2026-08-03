@@ -1,5 +1,6 @@
 import './App.css'
 import Experience from './component/experince'
+import Message from './component/message'
 import ContactPage from './Pages/ContactPage'
 import HomePage from './Pages/HomePage'
 import ProjectsPage from './Pages/ProjectsPage'
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <>
+      <Message/>
       <HomePage/>
       <Experience/>
       <ProjectsPage/>

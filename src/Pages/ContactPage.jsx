@@ -6,7 +6,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15, 
+      staggerChildren: 0.15,
       delayChildren: 0.2
     }
   }
@@ -14,10 +14,10 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.5 } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 }
   }
 };
 
@@ -36,8 +36,8 @@ const pulseVariants = {
 
 export default function ContactPage() {
   return (
-    <motion.footer 
-      className='contact' 
+    <motion.footer
+      className='contact'
       id='contact'
       initial="hidden"
       whileInView="visible"
@@ -48,15 +48,14 @@ export default function ContactPage() {
         <motion.h2 variants={itemVariants}>Contact</motion.h2>
 
         <motion.p className="bio" variants={itemVariants}>
-          Web developer with 2 years of experience designing and implementing
-          robust, scalable, and innovative web solutions. I write clean,
-          maintainable code and care about every detail — from architecture
-          to pixel-perfect UI.
+          Web developer with a passion for creating beautiful and functional web applications.
+          I specialize in frontend development using React.
+          I am always open to learning new technologies and improving my skills.
         </motion.p>
 
         <motion.ul className="tags" variants={itemVariants}>
           {['Frontend', 'React', 'Node.js', 'REST API', 'UI/UX'].map((tag, i) => (
-            <motion.li 
+            <motion.li
               key={i}
               whileHover={{ scale: 1.1, backgroundColor: '#ffffff', color: '#000000' }}
             >
@@ -67,13 +66,13 @@ export default function ContactPage() {
 
         <motion.div className="availability" variants={itemVariants}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-            <motion.span 
-              className="dot" 
+            <motion.span
+              className="dot"
               variants={pulseVariants}
               initial="initial"
               animate="animate"
             />
-            <span className="dot" style={{ position: 'absolute' }} /> 
+            <span className="dot" style={{ position: 'absolute' }} />
           </div>
           <p>Currently <span>open to freelance</span> projects</p>
         </motion.div>
@@ -95,7 +94,7 @@ export default function ContactPage() {
             key={i}
             href={social.src}
             target="_blank"
-            rel="noopener noreferrer" 
+            rel="noopener noreferrer"
             whileHover={{ y: -5, color: social.color }}
             transition={{ duration: 0.2 }}
             style={{ display: 'inline-block', margin: '0 10px', color: '#aaa' }}
