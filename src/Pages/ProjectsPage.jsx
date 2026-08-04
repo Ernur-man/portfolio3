@@ -15,12 +15,11 @@ const projects = [
   { id: 3, title: 'HTML', label: 'CLICK HERE TO VISIT', image: htmlImage, src: 'https://ernur-man.github.io/coffeDisc/' },
   { id: 4, title: 'JavaScript', label: 'CLICK HERE TO VISIT', image: jsImage, src: 'https://ernur-man.github.io/LasLesVpn/' },
   { id: 5, title: 'JavaScript', label: 'CLICK HERE TO VISIT', image: jsImage, src: 'https://ernur-man.github.io/TRWR/' },
-  { id: 6, title: 'JavaScript', label: 'CLICK HERE TO VISIT', image: jsImage, src: '' },
-  { id: 7, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/ktzh-project/' },
-  { id: 8, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/mixProject/' },
-  { id: 9, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/itmnew2/' },
-  { id: 10, title: 'TypeScript', label: 'CLICK HERE TO VISIT', image: tsTutor, src: 'https://ernur-man.github.io/tsproj1/' },
-  { id: 11, title: 'TypeScript', label: 'CLICK HERE TO VISIT', image: tsTutor, src: 'https://ernur-man.github.io/ts2/' }
+  { id: 6, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/ktzh-project/' },
+  { id: 7, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/mixProject/' },
+  { id: 8, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/itmnew2/' },
+  { id: 9, title: 'TypeScript', label: 'CLICK HERE TO VISIT', image: tsTutor, src: 'https://ernur-man.github.io/tsproj1/' },
+  { id: 10, title: 'TypeScript', label: 'CLICK HERE TO VISIT', image: tsTutor, src: 'https://ernur-man.github.io/ts2/' }
 ];
 
 

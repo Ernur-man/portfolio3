@@ -49,7 +49,7 @@ export default function ContactPage() {
 
         <motion.p className="bio" variants={itemVariants}>
           Web developer with a passion for creating beautiful and functional web applications.
-          I specialize in frontend development using React.
+          I specialize in frontend development using modern technologies.
           I am always open to learning new technologies and improving my skills.
         </motion.p>
 
