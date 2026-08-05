@@ -1,6 +1,7 @@
 import './App.css'
 import Experience from './component/experince'
 import Message from './component/message'
+import AboutPage from './Pages/AboutPage'
 import ContactPage from './Pages/ContactPage'
 import HomePage from './Pages/HomePage'
 import ProjectsPage from './Pages/ProjectsPage'
@@ -13,6 +14,7 @@ function App() {
     <>
       <Message/>
       <HomePage/>
+      <AboutPage/>
       <Experience/>
       <ProjectsPage/>
       <WorkPage/>
