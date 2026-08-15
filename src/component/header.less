@@ -68,3 +68,47 @@ header {
         }
     }
 }
+
+
+@media (max-width: 1130px) {
+    header {
+        border-radius: 0;
+        .container {
+            width: 95%;
+            position: relative;
+
+
+            .burger {
+                display: block;
+                z-index: 1000;
+            }
+
+            menu {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(1, 4, 20, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                z-index: 999;
+
+                &.active {
+                    display: flex;
+                }
+
+                li {
+                    list-style: none;
+                    a {
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

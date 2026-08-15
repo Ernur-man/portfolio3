@@ -1,26 +1,24 @@
 import './App.css'
-import Experience from './component/experince'
-import Message from './component/message'
 import AboutPage from './Pages/AboutPage'
 import ContactPage from './Pages/ContactPage'
 import HomePage from './Pages/HomePage'
 import ProjectsPage from './Pages/ProjectsPage'
 import WorkPage from './Pages/WorkPage'
 import { motion } from 'framer-motion'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
-
   return (
     <>
-      <Message/>
-      <HomePage/>
-      <AboutPage/>
-      <Experience/>
-      <ProjectsPage/>
-      <WorkPage/>
-      <ContactPage/>
+      <HomePage />
+
+      <ProjectsPage />
+      <WorkPage />
+
+
+      <ContactPage />
     </>
-  )
+  );
 }
 
 export default App

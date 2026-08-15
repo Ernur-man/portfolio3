@@ -149,7 +149,7 @@
 .layer {
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.863);
     position: fixed;
     top: 0;
     left: 0;
@@ -229,6 +229,62 @@
 
 @media (max-width: 768px) {
     .home {
+        height: auto;
+        .container {
+            section {
+                width: 95%;
+
+                h2 {
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 15px;
+                    line-height: 24px;
+                    margin-bottom: 30px;
+                }
+
+                nav {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    button {
+                        margin-right: 0;
+                        width: 100%;
+                    }
+
+                }
+            }
+
+            .image {
+                width: 150px;
+                height: 150px;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .layer {
+        .modal_window {
+            width: 90%;
+            padding: 20px;
+
+            i{
+                position: absolute;
+                top: 15px;
+                right: 12px;
+            }
+            form {
+                padding: 25px 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1130px){
+        .home {
         height: auto;
         .container {
             section {

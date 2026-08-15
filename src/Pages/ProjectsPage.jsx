@@ -10,16 +10,16 @@ import tsTutor from '../assets/ts.png'
 import { motion } from 'framer-motion';
 
 const projects = [
-  { id: 1, title: 'HTML', label: 'CLICK HERE TO VISIT', image: htmlImage, src: 'https://ernur-man.github.io/doctor_find/' },
-  { id: 2, title: 'HTML', label: 'CLICK HERE TO VISIT', image: htmlImage, src: 'https://ernur-man.github.io/build/' },
-  { id: 3, title: 'HTML', label: 'CLICK HERE TO VISIT', image: htmlImage, src: 'https://ernur-man.github.io/coffeDisc/' },
-  { id: 4, title: 'JavaScript', label: 'CLICK HERE TO VISIT', image: jsImage, src: 'https://ernur-man.github.io/LasLesVpn/' },
-  { id: 5, title: 'JavaScript', label: 'CLICK HERE TO VISIT', image: jsImage, src: 'https://ernur-man.github.io/TRWR/' },
+  { id: 1, title: 'HTML', label: 'CLICK HERE TO VISIT', image: htmlImage, src: 'https://ernur-man.github.io/DoctorFindPage/' },
+  { id: 2, title: 'HTML', label: 'CLICK HERE TO VISIT', image: htmlImage, src: 'https://ernur-man.github.io/BuildingCompanyPage/' },
+  { id: 3, title: 'HTML', label: 'CLICK HERE TO VISIT', image: htmlImage, src: 'https://ernur-man.github.io/coffeePage/' },
+  { id: 4, title: 'JavaScript', label: 'CLICK HERE TO VISIT', image: jsImage, src: 'https://ernur-man.github.io/VPNServicePage/' },
+  { id: 5, title: 'JavaScript', label: 'CLICK HERE TO VISIT', image: jsImage, src: 'https://ernur-man.github.io/WebDevelopmentServicePage_TRWR/' },
   { id: 6, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/ktzh-project/' },
-  { id: 7, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/mixProject/' },
-  { id: 8, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/itmnew2/' },
-  { id: 9, title: 'TypeScript', label: 'CLICK HERE TO VISIT', image: tsTutor, src: 'https://ernur-man.github.io/tsproj1/' },
-  { id: 10, title: 'TypeScript', label: 'CLICK HERE TO VISIT', image: tsTutor, src: 'https://ernur-man.github.io/ts2/' }
+  { id: 7, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/ItServicePage/' },
+  { id: 8, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/ItCompanyPage/' },
+  { id: 9, title: 'TypeScript', label: 'CLICK HERE TO VISIT', image: tsTutor, src: 'https://ernur-man.github.io/TsServicePage/' },
+  { id: 10, title: 'TypeScript', label: 'CLICK HERE TO VISIT', image: tsTutor, src: 'https://ernur-man.github.io/TsStorePage/' }
 ];
 
 
@@ -48,10 +48,14 @@ export default function ProjectsPage() {
               slidesPerView: 2,
               spaceBetween: 24,
             },
-            1024: {
-              slidesPerView: 3,
+            1130: {
+              slidesPerView: 2,
               spaceBetween: 30,
             },
+            1400: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            }
           }}
         >
           {projects.map((project) => (
@@ -64,7 +68,7 @@ export default function ProjectsPage() {
                 viewport={{ once: true, amount: 0.2 }}
                 whileHover={{ y: -10 }}
               >
-                <a href={project.src} target='_blank' aria-label={`Перейти на саит ${project.title}`}>
+                <a href={project.src} target='_blank' aria-label={`Go to the ${project.title} website!`}>
                   <div className="project-image">
                   <img src={project.image} alt={project.title} loading='lazy'/>
                   </div>
