@@ -26,23 +26,23 @@ const itemVariants = {
 export default function HomePage() {
   const [active, setActive]= useState(false);
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
-  const phoneRegex = /^\+?[0-9\s\-()]{7,15}$/;
-  const [phoneError, setPhoneError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const {t, i18n} = useTranslation();
 
 
 
-  function handlePhoneChange(e) {
+  function handleEmailChange(e) {
     const val = e.target.value;
-    setPhone(val);
+    setEmail(val);
     if (val === "") {
-      setPhoneError("");
-    } else if (!phoneRegex.test(val)) {
-      setPhoneError("Incorrect format. Please enter a valid phone number.");
+      setEmailError("");
+    } else if (!emailRegex.test(val)) {
+      setEmailError("Incorrect format. Please enter a valid Email number.");
     } else {
-      setPhoneError("");
+      setEmailError("");
     }
   }
 
@@ -54,16 +54,15 @@ export default function HomePage() {
 
   async function handleForm (e) {
       e.preventDefault();
-      if (!phoneRegex.test(phone)) return;
       const res = await fetch("https://formspree.io/f/xykaebjy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, phone }),
+      body: JSON.stringify({ name, email }),
     });
 
     if (res.ok) {
       setName("");
-      setPhone("");
+      setEmail("");
       setShowSuccess(true)
     }
   }
@@ -112,13 +111,13 @@ export default function HomePage() {
                     required
                   />
                   <input
-                    type="text"
-                    placeholder="Phone Number"
-                    value={phone}
-                    onChange={handlePhoneChange}
+                    type="email"
+                    placeholder="Enter email"
+                    value={email}
+                    onChange={handleEmailChange}
                     required
                   />
-                  {phoneError && <span className="error">{phoneError}</span>}
+                  {emailError && <span className="error">{emailError}</span>}
                   <button type="submit">Send</button>
                 </form>
               )}
