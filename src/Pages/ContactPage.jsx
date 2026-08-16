@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import './contact.less';
 import { useTranslation } from 'react-i18next';
+import { FaWhatsapp, FaInstagram, FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,6 +38,7 @@ const pulseVariants = {
 
 export default function ContactPage() {
   const {t, i18n} = useTranslation();
+
   return (
     <motion.footer
       className='contact'
@@ -80,29 +82,33 @@ export default function ContactPage() {
         <motion.div className="divider" variants={itemVariants} />
 
         <motion.p className="email" variants={itemVariants} whileHover={{ x: 5 }}>
-          <i className="fa-regular fa-envelope" />
+          <FaRegEnvelope />
           ernuraman926@gmail.com
         </motion.p>
 
         <motion.menu variants={itemVariants} className="social-links">
-        {[
-          { icon: 'fa-whatsapp', color: '#25D366', src: 'https://wa.me/77027968186' },
-          { icon: 'fa-instagram', color: '#E4405F', src: 'https://www.instagram.com/amanturlly.ernur' },
-          { icon: 'fa-linkedin-in', color: '#0077B5', src: 'https://www.linkedin.com/in/ernur-aman-1a3651398/' }
-        ].map((social, i) => (
-          <motion.a
-            key={i}
-            href={social.src}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ y: -5, color: social.color }}
-            transition={{ duration: 0.2 }}
-            style={{ display: 'inline-block', margin: '0 10px', color: '#aaa' }}
-          >
-            <i className={`fa-brands ${social.icon}`} style={{ fontSize: '22px' }} />
-          </motion.a>
-        ))}
-      </motion.menu>
+          {[
+            { icon: FaWhatsapp, color: '#25D366', src: 'https://wa.me/77027968186' },
+            { icon: FaInstagram, color: '#E4405F', src: 'https://www.instagram.com/amanturlly.ernur' },
+            { icon: FaLinkedinIn, color: '#0077B5', src: 'https://www.linkedin.com/in/ernur-aman-1a3651398/' }
+          ].map((social, i) => {
+            const Icon = social.icon;
+
+            return (
+              <motion.a
+                key={i}
+                href={social.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -5, color: social.color }}
+                transition={{ duration: 0.2 }}
+                style={{ display: 'inline-block', margin: '0 10px', color: '#aaa' }}
+              >
+                <Icon style={{ fontSize: '22px' }} />
+              </motion.a>
+            );
+          })}
+        </motion.menu>
       </div>
     </motion.footer>
   );
