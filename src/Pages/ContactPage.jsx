@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import './contact.less';
+import { useTranslation } from 'react-i18next';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,6 +36,7 @@ const pulseVariants = {
 };
 
 export default function ContactPage() {
+  const {t, i18n} = useTranslation();
   return (
     <motion.footer
       className='contact'
@@ -45,12 +47,10 @@ export default function ContactPage() {
       variants={containerVariants}
     >
       <div className="container">
-        <motion.h2 variants={itemVariants}>Contact</motion.h2>
+        <motion.h2 variants={itemVariants}>{t('contact')}</motion.h2>
 
         <motion.p className="bio" variants={itemVariants}>
-          Web developer with a passion for creating beautiful and functional web applications.
-          I specialize in frontend development using modern technologies.
-          I am always open to learning new technologies and improving my skills.
+          {t('contact_desc')}
         </motion.p>
 
         <motion.ul className="tags" variants={itemVariants}>

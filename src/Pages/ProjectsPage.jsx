@@ -8,18 +8,19 @@ import jsImage from '../assets/js.png'
 import reactImage from '../assets/react.png'
 import tsTutor from '../assets/ts.png'
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const projects = [
-  { id: 1, title: 'HTML', label: 'CLICK HERE TO VISIT', image: htmlImage, src: 'https://ernur-man.github.io/DoctorFindPage/' },
-  { id: 2, title: 'HTML', label: 'CLICK HERE TO VISIT', image: htmlImage, src: 'https://ernur-man.github.io/BuildingCompanyPage/' },
-  { id: 3, title: 'HTML', label: 'CLICK HERE TO VISIT', image: htmlImage, src: 'https://ernur-man.github.io/coffeePage/' },
-  { id: 4, title: 'JavaScript', label: 'CLICK HERE TO VISIT', image: jsImage, src: 'https://ernur-man.github.io/VPNServicePage/' },
-  { id: 5, title: 'JavaScript', label: 'CLICK HERE TO VISIT', image: jsImage, src: 'https://ernur-man.github.io/WebDevelopmentServicePage_TRWR/' },
-  { id: 6, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/ktzh-project/' },
-  { id: 7, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/ItServicePage/' },
-  { id: 8, title: 'React', label: 'CLICK HERE TO VISIT', image: reactImage, src: 'https://ernur-man.github.io/ItCompanyPage/' },
-  { id: 9, title: 'TypeScript', label: 'CLICK HERE TO VISIT', image: tsTutor, src: 'https://ernur-man.github.io/TsServicePage/' },
-  { id: 10, title: 'TypeScript', label: 'CLICK HERE TO VISIT', image: tsTutor, src: 'https://ernur-man.github.io/TsStorePage/' }
+  { id: 1, title: 'HTML',  image: htmlImage, src: 'https://ernur-man.github.io/DoctorFindPage/' },
+  { id: 2, title: 'HTML', image: htmlImage, src: 'https://ernur-man.github.io/BuildingCompanyPage/' },
+  { id: 3, title: 'HTML', image: htmlImage, src: 'https://ernur-man.github.io/coffeePage/' },
+  { id: 4, title: 'JavaScript',  image: jsImage, src: 'https://ernur-man.github.io/VPNServicePage/' },
+  { id: 5, title: 'JavaScript',  image: jsImage, src: 'https://ernur-man.github.io/WebDevelopmentServicePage_TRWR/' },
+  { id: 6, title: 'React',  image: reactImage, src: 'https://ernur-man.github.io/ktzh-project/' },
+  { id: 7, title: 'React',  image: reactImage, src: 'https://ernur-man.github.io/ItServicePage/' },
+  { id: 8, title: 'React', image: reactImage, src: 'https://ernur-man.github.io/ItCompanyPage/' },
+  { id: 9, title: 'TypeScript',  image: tsTutor, src: 'https://ernur-man.github.io/TsServicePage/' },
+  { id: 10, title: 'TypeScript',  image: tsTutor, src: 'https://ernur-man.github.io/TsStorePage/' }
 ];
 
 
@@ -33,10 +34,11 @@ const cardVariants = {
 };
 
 export default function ProjectsPage() {
+  const {t, i18n} = useTranslation();
   return (
     <main className="project" id='projects'>
       <div className="container">
-        <h2>PROJECTS</h2>
+        <h2>{t('projects').toUpperCase()}</h2>
         <Swiper
           modules={[Navigation]}
           slidesPerView={1}
@@ -74,7 +76,7 @@ export default function ProjectsPage() {
                   </div>
                   <div className="project-footer">
                     <div className="project-footer__text">
-                      <p className="project-footer__label">{project.label}</p>
+                      <p className="project-footer__label">{t('visit')}</p>
                       <h4 className="project-footer__title">{project.title}</h4>
                     </div>
                     <div className="project-footer__arrow">↗</div>

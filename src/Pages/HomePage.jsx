@@ -5,7 +5,7 @@ import './home.less';
 import { useEffect, useState } from 'react';
 import { div } from 'framer-motion/client';
 import { AnimatePresence } from 'framer-motion';
-
+import { useTranslation } from 'react-i18next';
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -30,6 +30,9 @@ export default function HomePage() {
   const [showSuccess, setShowSuccess] = useState(false);
   const phoneRegex = /^\+?[0-9\s\-()]{7,15}$/;
   const [phoneError, setPhoneError] = useState("");
+  const {t, i18n} = useTranslation();
+
+
 
   function handlePhoneChange(e) {
     const val = e.target.value;
@@ -142,14 +145,13 @@ export default function HomePage() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <motion.h2 variants={itemVariants}>
-            I do code and <br /> make content <span>about it!</span>
+          <motion.h2 variants={itemVariants} className={i18n.language === 'ru' ? 'ru-title' : ''}>
+            {t('desc_main_1')} <br />
+          {t('desc_main_2')} <span>{t('desc_main_3')}</span>
           </motion.h2>
 
           <motion.p variants={itemVariants}>
-            I am a web developer.
-            I want to improve my skills and work on projects that challenge me.
-            My goal is to keep learning, grow as a developer, and build useful products that make a difference.
+            {t('text_main')}
           </motion.p>
 
           <motion.nav variants={itemVariants} >
@@ -159,7 +161,7 @@ export default function HomePage() {
               onClick={() => setActive(true)}
               className="btn"
             >
-              Get in Touch
+              {t('button_form')}
             </motion.button>
 
             <motion.a
@@ -171,7 +173,7 @@ export default function HomePage() {
               whileTap={{ scale: 0.95 }}
               className="btn"
             >
-              Download CV
+              {t('button_download')}
             </motion.a>
           </motion.nav>
         </motion.section>

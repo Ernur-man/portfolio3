@@ -6,7 +6,7 @@ import ProjectsPage from './Pages/ProjectsPage'
 import WorkPage from './Pages/WorkPage'
 import { motion } from 'framer-motion'
 import { Routes, Route } from 'react-router-dom'
-
+import './i18next.js'
 function App() {
   return (
     <>
