@@ -23,20 +23,37 @@ header {
             a { cursor: pointer; transition: 0.3s; color: white; }
             a:hover { color: @accent; }
         }
-        div{
+        .language {
             display: flex;
-            .btn{
-                background: none;
+            align-items: center;
+            gap: 4px;
+            padding: 4px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 14px;
+            backdrop-filter: blur(10px);
+
+            .btn {
                 border: none;
-                margin-right: 12px;
-                font-size: 18px;
-                padding: 10px;
-                border-radius: 20px;
-                transition: 0.3s;
-            }
-            .active{
-                background: white;
-                color: black;
+                background: transparent;
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                padding: 7px 12px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.25s ease;
+
+                &:hover {
+                    color: white;
+                }
+
+                &.active {
+                    background: white;
+                    color: black;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+                }
             }
         }
     }
@@ -87,7 +104,6 @@ header {
             }
             .language {
                 display: none;
-
                 &.active {
                     display: flex;
                     position: fixed;
@@ -95,14 +111,17 @@ header {
                     left: 30px;
                     gap: 8px;
                     z-index: 1001;
+                    gap: 2px;
+                    padding: 2px;
+                    border-radius: 10px;
 
                     .btn {
-                        padding: 10px 14px;
-                        font-size: 20px;
+                        font-size: 11px;
+                        padding: 5px 8px;
+                        border-radius: 7px;
                     }
                 }
             }
-
         }
     }
 }

@@ -2,7 +2,7 @@ import { use, useState } from 'react';
 import './header.less';
 import logo from '../assets/logo.svg';
 import { useTranslation } from 'react-i18next';
-
+import { FaBars, FaXmark } from "react-icons/fa6";
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeEn, setActiveEn] = useState(true);
@@ -31,7 +31,7 @@ export default function Header() {
                 <a href="/portfolio3/"><img src={logo} alt="LOGO" loading='lazy'/></a>
 
                 <div className="burger" onClick={() => setIsOpen(!isOpen)}>
-                    <i className={isOpen ? "fa-solid fa-x" : "fa-solid fa-bars"}></i>
+                    {isOpen ? <FaXmark className="icon" /> : <FaBars className="icon" />}
                 </div>
 
                 <menu className={isOpen ? 'active' : ''}>
