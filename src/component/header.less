@@ -130,13 +130,15 @@ header {
                 top: 0;
                 left: 0;
                 width: 100vw;
-                height: 100vh;
-                background: rgba(1, 4, 20, 0.98);
+                height: 100dvh;
+                background: rgb(1, 4, 20);
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 gap: 40px;
                 z-index: 999;
+                overflow: hidden;
+                overscroll-behavior: none;
 
                 &.active {
                     display: flex;
@@ -166,7 +168,7 @@ header {
                         font-size: 20px;
                     }
                 }
-            }   
+            }
         }
     }
 }
