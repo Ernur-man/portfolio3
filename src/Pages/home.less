@@ -166,17 +166,18 @@
         padding: 30px;
         position: relative;
 
-        i {
+        .xmark {
             position: absolute;
             top: 20px;
             right: 20px;
+            color: black ;
+            fill: black ;
+            font-size: 24px;
             cursor: pointer;
-            color: #333;
-            font-size: 18px;
             transition: transform 0.2s;
 
             &:hover {
-                transform: scale(1.2);
+                transform: scale(1.1);
             }
         }
         form{
@@ -270,7 +271,7 @@
 
     .layer {
         .modal_window {
-            width: 90%;
+            width: 90% !important;
             padding: 20px;
 
             i{
@@ -326,8 +327,9 @@
 
     .layer {
         .modal_window {
-            width: 90%;
+            width: 52%;
             padding: 20px;
+            padding-top: 30px;
 
             i{
                 position: absolute;

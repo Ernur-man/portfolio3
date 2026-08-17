@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react';
 import { div } from 'framer-motion/client';
 import { AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { FaXmark } from 'react-icons/fa6';
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -88,7 +90,7 @@ export default function HomePage() {
               transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <i className="fa-solid fa-x" onClick={() => { setActive(false); setShowSuccess(false); }}></i>
+              <FaXmark onClick={() => { setActive(false); setShowSuccess(false); }} className='xmark'/>
 
               {showSuccess ? (
                 <motion.div
@@ -105,14 +107,14 @@ export default function HomePage() {
                 <form onSubmit={handleForm}>
                   <input
                     type="text"
-                    placeholder="Name"
+                    placeholder={t('name')}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
                   />
                   <input
                     type="email"
-                    placeholder="Enter email"
+                    placeholder={t('email')}
                     value={email}
                     onChange={handleEmailChange}
                     required

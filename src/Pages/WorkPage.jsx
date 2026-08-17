@@ -65,7 +65,7 @@ export default function WorkPage() {
           <motion.div variants={itemVariants}>
             <nav>
               <a
-                href="https://ernur-man.github.io/itmnew2/"
+                href="https://ernur-man.github.io/ItCompanyPage/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

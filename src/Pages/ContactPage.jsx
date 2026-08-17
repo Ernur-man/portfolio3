@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import './contact.less';
 import { useTranslation } from 'react-i18next';
-import { FaWhatsapp, FaInstagram, FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaLinkedinIn, FaRegEnvelope, FaGithub } from 'react-icons/fa';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -90,7 +90,8 @@ export default function ContactPage() {
           {[
             { icon: FaWhatsapp, color: '#25D366', src: 'https://wa.me/77027968186' },
             { icon: FaInstagram, color: '#E4405F', src: 'https://www.instagram.com/amanturlly.ernur' },
-            { icon: FaLinkedinIn, color: '#0077B5', src: 'https://www.linkedin.com/in/ernur-aman-1a3651398/' }
+            { icon: FaLinkedinIn, color: '#0077B5', src: 'https://www.linkedin.com/in/ernur-aman-1a3651398/' },
+            {icon: FaGithub, color: '#0077B5', src: 'https://github.com/Ernur-man'}
           ].map((social, i) => {
             const Icon = social.icon;
 
@@ -102,9 +103,9 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 whileHover={{ y: -5, color: social.color }}
                 transition={{ duration: 0.2 }}
-                style={{ display: 'inline-block', margin: '0 10px', color: '#aaa' }}
+                style={{ display: 'inline-block', margin: '0 10px', color: '#aaa'}}
               >
-                <Icon style={{ fontSize: '22px' }} />
+                <Icon style={{ fontSize: '24px', marginRight: '10px' }} />
               </motion.a>
             );
           })}
