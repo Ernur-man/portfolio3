@@ -54,6 +54,7 @@ export default function WorkPage() {
                 href="https://ernur-man.github.io/ktzh-project/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={t('open_proj')}
               >
                 <img src={logo_ktzh} alt="KTZH" loading="lazy" />
               </a>
@@ -76,6 +77,7 @@ export default function WorkPage() {
                 href="https://ernur-man.github.io/ItCompanyPage/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={t('open_proj')}
               >
                 <img src={logo_itm} alt="ITM" loading="lazy" />
               </a>

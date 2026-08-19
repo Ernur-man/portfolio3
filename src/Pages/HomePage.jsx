@@ -127,10 +127,7 @@ export default function HomePage() {
                     required
                   />
                   {emailError && <span className="error">{emailError}</span>}
-                  {submitError && <span className="error">{submitError}</span>}
-                  <button type="submit" disabled={isSending}>
-                    {isSending ? "Sending..." : "Send"}
-                  </button>
+                  <button type="submit" aria-label={t('send_form')}>Send</button>
                 </form>
               )}
             </motion.article>
@@ -169,6 +166,7 @@ export default function HomePage() {
               whileTap={{ scale: 0.95 }}
               onClick={() => setActive(true)}
               className="btn"
+              aria-label={t('open_form')}
             >
               {t('button_form')}
             </motion.button>
@@ -181,6 +179,7 @@ export default function HomePage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="btn"
+              aria-label={t('down_cv')}
             >
               {t('button_download')}
             </motion.a>

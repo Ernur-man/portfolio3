@@ -28,7 +28,7 @@ export default function Header() {
     return (
         <header>
             <div className="container">
-                <a href="/portfolio3/"><img src={logo} alt="LOGO" loading='lazy'/></a>
+                <a href="/portfolio3/"><img src={logo} alt="LOGO" loading='lazy' aria-label={t('logo')}/></a>
 
                 <div className="burger" onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? <FaXmark className="icon" /> : <FaBars className="icon" />}
@@ -41,8 +41,8 @@ export default function Header() {
                     <li><a href="#contact" onClick={() => setIsOpen(false)}>{t('contact')}</a></li>
                 </menu>
                 <div className={isOpen ? 'language active' : 'language'}>
-                    <button value="en" onClick={handleSubmit} className={activeEn ? 'btn active' : 'btn'}>EN</button>
-                    <button value="ru" onClick={handleSubmit} className={activeRu ? 'btn active' : 'btn'}>RU</button>
+                    <button value="en" onClick={handleSubmit} className={activeEn ? 'btn active' : 'btn'} aria-label={t('switch_en')}>EN</button>
+                    <button value="ru" onClick={handleSubmit} className={activeRu ? 'btn active' : 'btn'} aria-label={t('switch_ru')}>RU</button>
                 </div>
             </div>
         </header>

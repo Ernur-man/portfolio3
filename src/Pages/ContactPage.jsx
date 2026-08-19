@@ -88,10 +88,9 @@ export default function ContactPage() {
 
         <motion.menu variants={itemVariants} className="social-links">
           {[
-            { icon: FaWhatsapp, color: '#25D366', src: 'https://wa.me/77027968186' },
-            { icon: FaInstagram, color: '#E4405F', src: 'https://www.instagram.com/amanturlly.ernur' },
-            { icon: FaLinkedinIn, color: '#0077B5', src: 'https://www.linkedin.com/in/ernur-aman-1a3651398/' },
-            {icon: FaGithub, color: '#0077B5', src: 'https://github.com/Ernur-man'}
+            { icon: FaWhatsapp, color: '#25D366', src: 'https://wa.me/77027968186', aria: t('open_wa') },
+            { icon: FaInstagram, color: '#E4405F', src: 'https://www.instagram.com/amanturlly.ernur', aria: t('open_ins') },
+            { icon: FaLinkedinIn, color: '#0077B5', src: 'https://www.linkedin.com/in/ernur-aman-1a3651398/', aria: t('open_lin') },
           ].map((social, i) => {
             const Icon = social.icon;
 
