@@ -33,7 +33,15 @@ export default function WorkPage() {
         >
           {t('experience').toUpperCase()}
         </motion.h2>
-
+        <motion.p
+          className="work_subtitle"
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          {t('work_subtitle')}
+        </motion.p>
         <motion.article
           variants={containerVariants}
           initial="hidden"
@@ -66,7 +74,7 @@ export default function WorkPage() {
           <motion.div variants={itemVariants}>
             <nav>
               <a
-                href="https://ernur-man.github.io/itmnew2/"
+                href="https://ernur-man.github.io/ItCompanyPage/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={t('open_proj')}

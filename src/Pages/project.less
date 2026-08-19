@@ -1,174 +1,156 @@
-@import '../reset.less';
-
 .project {
-  width: 100%;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #fff;
+    top: 38%;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
 
   .container {
-    width: 90%;
+    width: 1200px;
     margin: 0 auto;
+  }
+
+  h2 {
+    margin-bottom: 40px;
     text-align: center;
-    h2 {
-      margin-bottom: 40px;
-      font-size: 30px;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
+    color: #fff;
   }
 
   .project-swiper {
-    width: 100%;
+    overflow: hidden;
+    padding: 15px 50px 50px;
   }
 
   .project-card {
-    background: #1e1d1b;
-    border-radius: 16px;
+    height: 100%;
     overflow: hidden;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease, transform 0.3s ease;
-    width: 360px;
+    background: #15172b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    transition: box-shadow 0.3s ease;
 
     &:hover {
-      transform: scale(1);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
     }
   }
 
   .project-image {
-    width: 100%;
-    height: 180px;
+    height: 220px;
     overflow: hidden;
-    padding: 0;
-    margin: 0;
+    background: #2a2d45;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
+      transition: transform 0.5s ease;
+    }
+  }
+
+  .project-card:hover .project-image img {
+    transform: scale(1.04);
+  }
+
+  .project-body {
+    padding: 24px 24px 18px;
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    p {
+      margin: 0;
+      min-height: 48px;
+      color: #a0a4c0;
+      font-size: 14px;
+      line-height: 1.6;
     }
   }
 
   .project-footer {
     display: flex;
+    gap: 10px;
+    padding: 0 24px 24px;
+  }
+
+  .project-btn {
+    flex: 1;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 14px 16px;
-    background: #252422;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease;
 
-    &__text {
-      text-align: left;
+    span {
+      font-size: 16px;
     }
 
-    &__label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      color: #888;
-      margin-bottom: 4px;
-      text-transform: uppercase;
+    &--primary {
+      background: #fff;
+      color: #111;
+
+      &:hover {
+        background: #e0e0e0;
+      }
     }
 
-    &__title {
-      font-size: 15px;
-      font-weight: 800;
-      color: #ffffff;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+    &--secondary {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      background: transparent;
 
-    &__arrow {
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1.5px solid #444;
-      border-radius: 8px;
-      color: #ffffff;
-      font-size: 18px;
-      flex-shrink: 0;
-      transition: border-color 0.2s ease;
-    }
-  }
-
-  .project-card:hover .project-footer__arrow {
-    border-color: #7c5cbf;
-  }
-
-  .project-swiper{
-    padding: 0 40px !important;
-    .swiper-wrapper{
-      padding: 0 70px;
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
     }
   }
 }
 
-
-
-@media (max-width: 768px) {
+@media (max-width: 1230px) {
   .project {
-    padding-top: 50px;
-    padding-bottom: 50px;
-
     .container {
-      width: 95%;
-
-      h2 {
-        font-size: 24px;
-        margin-bottom: 30px;
-      }
-    }
-
-    .project-card {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    .project-swiper {
-      padding: 0 10px !important;
-
-      .swiper-wrapper {
-        padding: 0;
-      }
-    }
-
-    .project-image {
-        height: 150px;
+      width: calc(100% - 40px);
     }
   }
 }
 
-@media (max-width: 1130px){
+@media (max-width: 600px) {
   .project {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 70px 0;
 
     .container {
-      width: 95%;
-
-      h2 {
-        font-size: 24px;
-        margin-bottom: 30px;
-      }
-    }
-
-    .project-card {
-      width: 80%;
-      margin: 0 auto;
-    }
-
-    .project-swiper {
-      padding: 0 10px !important;
-
-      .swiper-wrapper {
-        padding: 0;
-      }
+      width: calc(100% - 30px);
     }
 
     .project-image {
-        height: 150px;
+      height: 190px;
+    }
+
+    .project-body {
+      padding: 20px 18px 15px;
+    }
+
+    .project-footer {
+      padding: 0 18px 18px;
     }
   }
 }

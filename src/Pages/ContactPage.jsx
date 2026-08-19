@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import './contact.less';
 import { useTranslation } from 'react-i18next';
-import { FaWhatsapp, FaInstagram, FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa';
+import { FaWhatsapp, FaInstagram, FaLinkedinIn, FaRegEnvelope, FaGithub } from 'react-icons/fa';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -102,9 +102,9 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 whileHover={{ y: -5, color: social.color }}
                 transition={{ duration: 0.2 }}
-                style={{ display: 'inline-block', margin: '0 10px', color: '#aaa' }}
+                style={{ display: 'inline-block', margin: '0 10px', color: '#aaa'}}
               >
-                <Icon style={{ fontSize: '22px' }} />
+                <Icon style={{ fontSize: '24px', marginRight: '10px' }} />
               </motion.a>
             );
           })}
