@@ -12,6 +12,12 @@ Personal developer portfolio built with React and Vite.
 - Swiper
 - Less
 
+## Structure
+- Home
+- Projects
+- Works 
+- Contacts
+
 ## Getting Started
 
 ```bash

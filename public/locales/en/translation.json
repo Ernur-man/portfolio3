@@ -8,7 +8,7 @@
     "desc_main_3": "about it!",
     "name": "Enter name",
     "email": "Enter email",
-    "text_main": "I am a web developer. I want to improve my skills and work on projects that challenge me. My goal is to keep learning, grow as a developer, and build useful products that make a difference.",
+    "text_main": "I'm a frontend developer currently studying AI engineering. I focus on writing clean code, learning modern tools, and building things that work well and look good.",
     "button_form": "Get in Touch",
     "button_download": "Download CV",
     "visit": "CLICK HERE TO VISIT",
@@ -34,5 +34,6 @@
     "p9_title": "TS Service Page",
     "p9_desc": "TypeScript-powered service page with dynamic content and animations.",
     "p10_title": "TS Store Page",
-    "p10_desc": "Online store built with TypeScript featuring product listing and cart."
+    "p10_desc": "Online store built with TypeScript featuring product listing and cart.",
+    "work_subtitle": "I did these projects during my studies with my mentor."
 }
