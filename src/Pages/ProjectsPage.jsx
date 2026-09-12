@@ -159,6 +159,7 @@ export default function ProjectsPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-btn project-btn--primary"
+                    aria-label={t('open_proj')}
                   >
                     Open project
                     <span>↗</span>
